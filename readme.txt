@@ -10,6 +10,7 @@ running pipeline: Rewiring_ specific_cell_network.m
 
 Calculating the single-cell graph entropy (SGE)
 input data: hESCs_to_DECs_data.txt, tmp_network1_adj_edges_all, tmp_network2_adj_edges_all, ..., tmp_network758_adj_edges_all
+output data: HP.mat
 running pipeline: SGE.m
 
 Displaying result
