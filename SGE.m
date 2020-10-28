@@ -63,9 +63,7 @@ for c=1:cell_num
                 node_p_rho(n)=abs(curr_weight(c)*mprofile(str2num(nei),c));
             end
             
-            for num=1:length(node_p_rho)
-                node_p_rho(num)=node_p_rho(num)/(sum(node_p_rho)+es);
-            end
+            node_p_rho=node_p_rho/(sum(node_p_rho)+es);
             
             for num=1:length(node_p_rho)
                 node_HP(c,na)=node_HP(c,na)-(1/length(adjacent_network{na}))*(node_p_rho(num).*log(node_p_rho(num)+es));
