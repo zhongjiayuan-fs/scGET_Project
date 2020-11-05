@@ -34,6 +34,10 @@ ylabel('SGE');
 %plot(t,aver_comidx,'r','LineWidth',3);
 title('Average SGE for  hESCs-to-DECs data');
 
+%pvalue
+t=(mean(node_result(1:3))-node_result(4))/(std((node_result(1:3)))/sqrt(3))
+p_r=tpdf(t,2)
+
 
 
 
