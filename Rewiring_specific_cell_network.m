@@ -23,39 +23,8 @@ end
 fclose(fpi);
 
 mprofile=log(1+mprofile);
-time_0h=mprofile(:,1:92);
-time_12h=mprofile(:,93:194);
-time_24h=mprofile(:,195:260);
-time_36h=mprofile(:,261:432);
-time_72h=mprofile(:,433:570);
-time_96h=mprofile(:,571:758);
 
-
-cell_network_0h=net(time_0h);
-cell_network_12h=net(time_12h);
-cell_network_24h=net(time_24h);
-cell_network_36h=net(time_36h);
-cell_network_72h=net(time_72h);
-cell_network_96h=net(time_96h);
-
-
-
-cell_network=cell_network_0h;
-for i=93:194
-    cell_network{1,i}=cell_network_12h{1,i-92};
-end
-for i=195:260
-    cell_network{1,i}=cell_network_24h{1,i-194};
-end
-for i=261:432
-    cell_network{1,i}=cell_network_36h{1,i-260};
-end
-for i=433:570
-    cell_network{1,i}=cell_network_72h{1,i-432};
-end
-for i=571:758
-    cell_network{1,i}=cell_network_96h{1,i-570};
-end
+load cell_network.mat;
 
 pretime=clock;
 for c=1:length(cell_network)
@@ -95,10 +64,4 @@ for c=1:length(cell_network)
     currtime=clock;
     c,etime(currtime,pretime)
 end
-
-
-
-
-
- 
 
