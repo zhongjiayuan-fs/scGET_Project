@@ -3,7 +3,7 @@ The input data can be changed with the other four datasets if necessary.
 
 
 Rewiring the cell-specific networks
-input data: hESCs_to_DECs_data.txt   cell_network.mat
+input data: hESCs_to_DECs_data.txt
 output data: tmp_network1_adj_edges_all, tmp_network2_adj_edges_all, ..., tmp_network758_adj_edges_all
 running pipeline: Rewiring_ specific_cell_network.m
 
